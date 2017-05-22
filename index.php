@@ -23,13 +23,10 @@ $xmlReader->close();
 @mkdir('/tmp/bik-dic/', 0777, true);
 
 $fp = fopen ('/tmp/bik-dic/tmp.zip', 'w+');
-//Here is the file we are downloading, replace spaces with %20
 $ch = curl_init(str_replace(" ","%20", $path));
 curl_setopt($ch, CURLOPT_TIMEOUT, 50);
-// write curl response to file
 curl_setopt($ch, CURLOPT_FILE, $fp);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-// get curl response
 curl_exec($ch);
 curl_close($ch);
 fclose($fp);
