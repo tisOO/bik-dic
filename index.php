@@ -3,7 +3,6 @@
 $xmlReader = new \XMLReader();
 
 $xmlReader->open('http://www.cbr.ru/mcirabis/PluginInterface/GetBicCatalog.aspx?type=db');
-$xmlReader->open('biclistDB.xml');
 
 $path = 'http://www.cbr.ru';
 
